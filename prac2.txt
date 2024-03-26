@@ -1,0 +1,92 @@
+WebForm3.aspx
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm3.aspx.cs" Inherits="SSBTWEB.WebForm3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        </div>
+    </form>
+</body>
+</html>
+
+WebForm3.aspx.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace SSBTWEB
+{
+    public partial class WebForm3 : System.Web.UI.Page
+    {
+        protected override void OnPreInit(EventArgs e)
+        {
+            Response.Write("<br/> This is before intialization");
+            base.OnPreInit(e);
+        }
+        protected override void OnInit(EventArgs e)
+        {
+            Response.Write("<br/> This is  intialization");
+            base.OnInit(e);
+        }
+        protected override void OnInitComplete(EventArgs e)
+        {
+            Response.Write("<br/> This is  intialization complete");
+            base.OnInitComplete(e);
+        }
+        protected override void OnPreLoad(EventArgs e)
+        {
+            Response.Write("<br/> This is before page loading");
+            base.OnPreLoad(e);
+        }
+        protected override void OnLoad(EventArgs e)
+        {
+            Response.Write("<br/> This is page loading");
+            base.OnLoad(e);
+        }
+        protected override void OnLoadComplete(EventArgs e)
+        {
+            Response.Write("<br/> This is page loading complete");
+            base.OnLoadComplete(e);
+        }
+        protected override void OnPreRender(EventArgs e)
+        {
+            Response.Write("<br/> This is page Rendering");
+            base.OnPreRender(e);
+        }
+
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        
+}
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+
+O/P:
+This is before intialization
+This is intialization
+This is intialization complete
+This is before page loading
+This is page loading
+This is page loading complete
+This is page Rendering
+Button
